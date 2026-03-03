@@ -68,3 +68,63 @@ body{
     align-items: center;
   }
 }
+
+.dessertCard{
+  >img{
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .addToCartBtn{
+    margin: auto;
+    margin-top: -30px;
+    position: relative;
+    background: white;
+  }
+  .increasedAddToCart{
+    background: var(--color-red);
+  }
+
+  .category{
+    color: var(--color-rose-500);
+    margin-top: 20px;
+  }
+
+  .name{
+    color: var(--color-rose-900);
+    display: block;
+    padding: 5px 0px;
+    font-size: 1.2rem;
+  }
+
+  .price{
+    color: var(--color-red);
+    font-weight: bold;
+  }
+}
+
+.cardGrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+#root{
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 800px){
+  /* MEDIA QUERY */
+  .cardGrid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dessertCard{
+    >img{
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
